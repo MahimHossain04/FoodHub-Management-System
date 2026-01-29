@@ -1,0 +1,6 @@
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\RestaurantDemo.csproj.AssemblyReference.cache
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\RestaurantDemo.Login.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\RestaurantDemo.Properties.Resources.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\RestaurantDemo.Registration.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\RestaurantDemo.csproj.GenerateResource.cache
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\RestaurantDemo.csproj.CoreCompileInputs.cache

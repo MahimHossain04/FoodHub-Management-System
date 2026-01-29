@@ -1,0 +1,27 @@
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub Management System.csproj.AssemblyReference.cache
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub_Management_System.Admin.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub_Management_System.Properties.Resources.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub Management System.csproj.GenerateResource.cache
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub Management System.csproj.CoreCompileInputs.cache
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub_Management_System.Dashboard.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\bin\Debug\FoodHub_Management_System.exe.config
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\bin\Debug\FoodHub_Management_System.exe
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\bin\Debug\FoodHub_Management_System.pdb
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub_Management_System.Login.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub_Management_System.Registration.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub_Management_System.exe
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub_Management_System.pdb
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub_Management_System.UserInfos.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub_Management_System.Inventory_Admin.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub_Management_System.OrderDetails.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\Final_Project.EmployeeMainPage.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\Final_Project.OrderDetails1.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub_Management_System.Inventory_Employee.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\Final_Project.Deshboard_Emp.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub_Management_System.chefPanel.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub_Management_System.pandingOrder.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub_Management_System.Form1.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub_Management_System.MenuForm.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub_Management_System.MyOrderForm.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub_Management_System.OrderForm.resources
+D:\FoodHub Management System\FoodHub Management System\FoodHub Management System\obj\Debug\FoodHub_Management_System.PaymentForm.resources
