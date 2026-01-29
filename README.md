@@ -89,7 +89,7 @@ Follow the steps below to run the project locally:
 ### Step 2: Database Setup
 
 1. Open **MySQL Workbench**
-2. Create a new database (any name)
+2. Create a new database (Name: FoodHub Management System)
 3. Open **New Query**
 4. Open the provided database `.txt` file
 5. Copy all SQL code
