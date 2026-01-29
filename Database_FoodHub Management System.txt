@@ -1,0 +1,384 @@
+USE [FoodHub Management System]
+GO
+/****** Object:  Table [dbo].[Category]    Script Date: 1/24/2026 10:19:31 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Category](
+	[CategoryID] [int] IDENTITY(1,1) NOT NULL,
+	[CategoryName] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_Category] PRIMARY KEY CLUSTERED 
+(
+	[CategoryID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[chefOrders]    Script Date: 1/24/2026 10:19:31 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[chefOrders](
+	[OrderID] [int] IDENTITY(1,1) NOT NULL,
+	[FoodItemName] [nvarchar](max) NOT NULL,
+	[Quantity] [int] NOT NULL,
+	[OrderStatus] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_chefOrders] PRIMARY KEY CLUSTERED 
+(
+	[OrderID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Customer_Order]    Script Date: 1/24/2026 10:19:31 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Customer_Order](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Type] [nvarchar](max) NOT NULL,
+	[Status] [nvarchar](max) NOT NULL,
+	[DateTime] [date] NOT NULL,
+ CONSTRAINT [PK_Customer_Order] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Inventory]    Script Date: 1/24/2026 10:19:31 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Inventory](
+	[ProductID] [int] IDENTITY(1,1) NOT NULL,
+	[CategoryID] [int] NOT NULL,
+	[MenuID] [int] NOT NULL,
+	[UnitPrice] [int] NOT NULL,
+	[Quantity] [int] NOT NULL,
+ CONSTRAINT [PK_Inventory] PRIMARY KEY CLUSTERED 
+(
+	[ProductID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Menu]    Script Date: 1/24/2026 10:19:31 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Menu](
+	[MenuID] [int] IDENTITY(1,1) NOT NULL,
+	[MenuName] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_Menu] PRIMARY KEY CLUSTERED 
+(
+	[MenuID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Menu1]    Script Date: 1/24/2026 10:19:31 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Menu1](
+	[MenuID] [int] IDENTITY(1,1) NOT NULL,
+	[ItemName] [nvarchar](max) NOT NULL,
+	[UnitPrice] [int] NOT NULL,
+	[CustomerID] [int] NOT NULL,
+	[CategoryID] [int] NOT NULL,
+	[Quantity] [int] NOT NULL,
+ CONSTRAINT [PK_Menu1] PRIMARY KEY CLUSTERED 
+(
+	[MenuID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Menuu]    Script Date: 1/24/2026 10:19:31 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Menuu](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](50) NULL,
+	[Price] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Orders]    Script Date: 1/24/2026 10:19:31 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Orders](
+	[OrderId] [int] NOT NULL,
+	[ItemName] [nvarchar](50) NOT NULL,
+	[Quantity] [int] NULL,
+	[TotalPrice] [nchar](10) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[OrderId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Orderss]    Script Date: 1/24/2026 10:19:31 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Orderss](
+	[OrderId] [int] IDENTITY(1,1) NOT NULL,
+	[ItemName] [varchar](50) NULL,
+	[Quantity] [int] NULL,
+	[TotalPrice] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[OrderId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[ShowMenu]    Script Date: 1/24/2026 10:19:31 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ShowMenu](
+	[Id] [int] IDENTITY(1000,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Price] [int] NOT NULL,
+ CONSTRAINT [PK_ShowMenu] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[UserInfo]    Script Date: 1/24/2026 10:19:31 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[UserInfo](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[FirstName] [nvarchar](max) NOT NULL,
+	[LastName] [nvarchar](max) NOT NULL,
+	[Email] [nvarchar](max) NOT NULL,
+	[Password] [nvarchar](max) NOT NULL,
+	[Gender] [nvarchar](max) NULL,
+	[DateOfBirth] [date] NULL,
+	[UserType] [nvarchar](max) NOT NULL,
+	[Salary] [float] NULL,
+	[JoiningDate] [date] NULL,
+ CONSTRAINT [PK_UserInfo] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Category] ON 
+GO
+INSERT [dbo].[Category] ([CategoryID], [CategoryName]) VALUES (1, N'Fast foods')
+GO
+INSERT [dbo].[Category] ([CategoryID], [CategoryName]) VALUES (3, N'Drinks')
+GO
+INSERT [dbo].[Category] ([CategoryID], [CategoryName]) VALUES (4, N'Deserts ')
+GO
+SET IDENTITY_INSERT [dbo].[Category] OFF
+GO
+SET IDENTITY_INSERT [dbo].[chefOrders] ON 
+GO
+INSERT [dbo].[chefOrders] ([OrderID], [FoodItemName], [Quantity], [OrderStatus]) VALUES (1, N'Burger', 2, N'Pending')
+GO
+INSERT [dbo].[chefOrders] ([OrderID], [FoodItemName], [Quantity], [OrderStatus]) VALUES (2, N'Pizza', 1, N'Pending')
+GO
+INSERT [dbo].[chefOrders] ([OrderID], [FoodItemName], [Quantity], [OrderStatus]) VALUES (3, N'Fried Rice', 3, N'Pending')
+GO
+INSERT [dbo].[chefOrders] ([OrderID], [FoodItemName], [Quantity], [OrderStatus]) VALUES (4, N'Chicken Curry', 2, N'Preparing')
+GO
+INSERT [dbo].[chefOrders] ([OrderID], [FoodItemName], [Quantity], [OrderStatus]) VALUES (5, N'Pasta', 1, N'Ready')
+GO
+INSERT [dbo].[chefOrders] ([OrderID], [FoodItemName], [Quantity], [OrderStatus]) VALUES (6, N'Sandwich', 4, N'Pending')
+GO
+INSERT [dbo].[chefOrders] ([OrderID], [FoodItemName], [Quantity], [OrderStatus]) VALUES (7, N'Grilled Chicken', 2, N'Preparing')
+GO
+INSERT [dbo].[chefOrders] ([OrderID], [FoodItemName], [Quantity], [OrderStatus]) VALUES (9, N'Vegetable Noodles', 2, N'Ready')
+GO
+INSERT [dbo].[chefOrders] ([OrderID], [FoodItemName], [Quantity], [OrderStatus]) VALUES (10, N'French Fries', 5, N'Ready')
+GO
+SET IDENTITY_INSERT [dbo].[chefOrders] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Customer_Order] ON 
+GO
+INSERT [dbo].[Customer_Order] ([ID], [Type], [Status], [DateTime]) VALUES (1, N'Dine-in', N'Pending', CAST(N'2026-12-12' AS Date))
+GO
+INSERT [dbo].[Customer_Order] ([ID], [Type], [Status], [DateTime]) VALUES (2, N'Delivery', N'Served', CAST(N'2026-01-08' AS Date))
+GO
+INSERT [dbo].[Customer_Order] ([ID], [Type], [Status], [DateTime]) VALUES (3, N'Take Away', N'Ready', CAST(N'2026-01-20' AS Date))
+GO
+INSERT [dbo].[Customer_Order] ([ID], [Type], [Status], [DateTime]) VALUES (4, N'Delivery', N'Preparing', CAST(N'2026-06-09' AS Date))
+GO
+INSERT [dbo].[Customer_Order] ([ID], [Type], [Status], [DateTime]) VALUES (5, N'Take Away', N'Ready', CAST(N'2026-01-19' AS Date))
+GO
+INSERT [dbo].[Customer_Order] ([ID], [Type], [Status], [DateTime]) VALUES (6, N'Take Away', N'Ready', CAST(N'2026-01-07' AS Date))
+GO
+INSERT [dbo].[Customer_Order] ([ID], [Type], [Status], [DateTime]) VALUES (7, N'Delivery', N'Ready', CAST(N'2025-12-03' AS Date))
+GO
+INSERT [dbo].[Customer_Order] ([ID], [Type], [Status], [DateTime]) VALUES (9, N'Dine-in', N'Served', CAST(N'2026-01-24' AS Date))
+GO
+INSERT [dbo].[Customer_Order] ([ID], [Type], [Status], [DateTime]) VALUES (10, N'Delivery', N'Ready', CAST(N'2026-01-24' AS Date))
+GO
+INSERT [dbo].[Customer_Order] ([ID], [Type], [Status], [DateTime]) VALUES (11, N'Dine-in', N'Preparing', CAST(N'2026-01-24' AS Date))
+GO
+INSERT [dbo].[Customer_Order] ([ID], [Type], [Status], [DateTime]) VALUES (12, N'Take Away', N'Pending', CAST(N'2026-01-19' AS Date))
+GO
+INSERT [dbo].[Customer_Order] ([ID], [Type], [Status], [DateTime]) VALUES (13, N'Take Away', N'Preparing', CAST(N'2026-01-24' AS Date))
+GO
+INSERT [dbo].[Customer_Order] ([ID], [Type], [Status], [DateTime]) VALUES (14, N'Delivery', N'Served', CAST(N'2026-01-24' AS Date))
+GO
+INSERT [dbo].[Customer_Order] ([ID], [Type], [Status], [DateTime]) VALUES (15, N'Dine-in', N'Preparing', CAST(N'2026-01-13' AS Date))
+GO
+INSERT [dbo].[Customer_Order] ([ID], [Type], [Status], [DateTime]) VALUES (16, N'Dine-in', N'Preparing', CAST(N'2026-01-13' AS Date))
+GO
+INSERT [dbo].[Customer_Order] ([ID], [Type], [Status], [DateTime]) VALUES (17, N'Delivery', N'Ready', CAST(N'2026-01-24' AS Date))
+GO
+INSERT [dbo].[Customer_Order] ([ID], [Type], [Status], [DateTime]) VALUES (18, N'Dine-in', N'Cencelled', CAST(N'2026-01-24' AS Date))
+GO
+INSERT [dbo].[Customer_Order] ([ID], [Type], [Status], [DateTime]) VALUES (19, N'Delivery', N'Pending', CAST(N'2026-01-18' AS Date))
+GO
+SET IDENTITY_INSERT [dbo].[Customer_Order] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Inventory] ON 
+GO
+INSERT [dbo].[Inventory] ([ProductID], [CategoryID], [MenuID], [UnitPrice], [Quantity]) VALUES (3, 1, 2, 220, 12)
+GO
+INSERT [dbo].[Inventory] ([ProductID], [CategoryID], [MenuID], [UnitPrice], [Quantity]) VALUES (4, 2, 6, 110, 5)
+GO
+INSERT [dbo].[Inventory] ([ProductID], [CategoryID], [MenuID], [UnitPrice], [Quantity]) VALUES (6, 3, 16, 90, 10)
+GO
+INSERT [dbo].[Inventory] ([ProductID], [CategoryID], [MenuID], [UnitPrice], [Quantity]) VALUES (7, 2, 14, 110, 2)
+GO
+INSERT [dbo].[Inventory] ([ProductID], [CategoryID], [MenuID], [UnitPrice], [Quantity]) VALUES (9, 4, 19, 150, 15)
+GO
+INSERT [dbo].[Inventory] ([ProductID], [CategoryID], [MenuID], [UnitPrice], [Quantity]) VALUES (10, 3, 17, 55, 20)
+GO
+INSERT [dbo].[Inventory] ([ProductID], [CategoryID], [MenuID], [UnitPrice], [Quantity]) VALUES (11, 1, 9, 255, 12)
+GO
+INSERT [dbo].[Inventory] ([ProductID], [CategoryID], [MenuID], [UnitPrice], [Quantity]) VALUES (12, 3, 18, 45, 5)
+GO
+SET IDENTITY_INSERT [dbo].[Inventory] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Menu] ON 
+GO
+INSERT [dbo].[Menu] ([MenuID], [MenuName]) VALUES (2, N'Burger')
+GO
+INSERT [dbo].[Menu] ([MenuID], [MenuName]) VALUES (3, N'Pizza')
+GO
+INSERT [dbo].[Menu] ([MenuID], [MenuName]) VALUES (5, N'Coca-Cola')
+GO
+INSERT [dbo].[Menu] ([MenuID], [MenuName]) VALUES (6, N'Fries')
+GO
+INSERT [dbo].[Menu] ([MenuID], [MenuName]) VALUES (7, N'Sweets')
+GO
+INSERT [dbo].[Menu] ([MenuID], [MenuName]) VALUES (8, N'Chicken Burger')
+GO
+INSERT [dbo].[Menu] ([MenuID], [MenuName]) VALUES (9, N'Beef Burger')
+GO
+INSERT [dbo].[Menu] ([MenuID], [MenuName]) VALUES (10, N'Veg Pizza')
+GO
+INSERT [dbo].[Menu] ([MenuID], [MenuName]) VALUES (11, N'BBQ Pizza')
+GO
+INSERT [dbo].[Menu] ([MenuID], [MenuName]) VALUES (12, N'Fried Chicken')
+GO
+INSERT [dbo].[Menu] ([MenuID], [MenuName]) VALUES (13, N'Chicken Wings')
+GO
+INSERT [dbo].[Menu] ([MenuID], [MenuName]) VALUES (14, N'Hot Dog')
+GO
+INSERT [dbo].[Menu] ([MenuID], [MenuName]) VALUES (15, N'Sandwich')
+GO
+INSERT [dbo].[Menu] ([MenuID], [MenuName]) VALUES (16, N'Milkshake')
+GO
+INSERT [dbo].[Menu] ([MenuID], [MenuName]) VALUES (17, N'Lemonade')
+GO
+INSERT [dbo].[Menu] ([MenuID], [MenuName]) VALUES (18, N'Brownie')
+GO
+INSERT [dbo].[Menu] ([MenuID], [MenuName]) VALUES (19, N'Cup Cake')
+GO
+SET IDENTITY_INSERT [dbo].[Menu] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Menu1] ON 
+GO
+INSERT [dbo].[Menu1] ([MenuID], [ItemName], [UnitPrice], [CustomerID], [CategoryID], [Quantity]) VALUES (2, N'Burger', 220, 1, 1, 9)
+GO
+INSERT [dbo].[Menu1] ([MenuID], [ItemName], [UnitPrice], [CustomerID], [CategoryID], [Quantity]) VALUES (4, N'Coffee', 110, 2, 3, 3)
+GO
+INSERT [dbo].[Menu1] ([MenuID], [ItemName], [UnitPrice], [CustomerID], [CategoryID], [Quantity]) VALUES (6, N'Milshake', 155, 5, 1, 5)
+GO
+SET IDENTITY_INSERT [dbo].[Menu1] OFF
+GO
+SET IDENTITY_INSERT [dbo].[ShowMenu] ON 
+GO
+INSERT [dbo].[ShowMenu] ([Id], [Name], [Price]) VALUES (1009, N'Burger', 350)
+GO
+INSERT [dbo].[ShowMenu] ([Id], [Name], [Price]) VALUES (1010, N'Milkshake', 250)
+GO
+INSERT [dbo].[ShowMenu] ([Id], [Name], [Price]) VALUES (1011, N'Fries', 300)
+GO
+INSERT [dbo].[ShowMenu] ([Id], [Name], [Price]) VALUES (1012, N'Pizza', 500)
+GO
+INSERT [dbo].[ShowMenu] ([Id], [Name], [Price]) VALUES (1013, N'Wadges', 40)
+GO
+INSERT [dbo].[ShowMenu] ([Id], [Name], [Price]) VALUES (1014, N'Fried Rice', 150)
+GO
+INSERT [dbo].[ShowMenu] ([Id], [Name], [Price]) VALUES (1015, N'Chicken Fry', 600)
+GO
+INSERT [dbo].[ShowMenu] ([Id], [Name], [Price]) VALUES (1016, N'Water', 16)
+GO
+INSERT [dbo].[ShowMenu] ([Id], [Name], [Price]) VALUES (1017, N'Cold', 70)
+GO
+SET IDENTITY_INSERT [dbo].[ShowMenu] OFF
+GO
+SET IDENTITY_INSERT [dbo].[UserInfo] ON 
+GO
+INSERT [dbo].[UserInfo] ([ID], [FirstName], [LastName], [Email], [Password], [Gender], [DateOfBirth], [UserType], [Salary], [JoiningDate]) VALUES (2, N'Mahim', N'Hossain', N'admin', N'admin', N'Male', CAST(N'2026-01-19' AS Date), N'Admin', NULL, NULL)
+GO
+INSERT [dbo].[UserInfo] ([ID], [FirstName], [LastName], [Email], [Password], [Gender], [DateOfBirth], [UserType], [Salary], [JoiningDate]) VALUES (5, N'Sadia', N'Aniqua', N'sadia@admin', N'sadia@aiub.com123', N'Female', CAST(N'2003-01-19' AS Date), N'Admin', 0, CAST(N'2026-01-21' AS Date))
+GO
+INSERT [dbo].[UserInfo] ([ID], [FirstName], [LastName], [Email], [Password], [Gender], [DateOfBirth], [UserType], [Salary], [JoiningDate]) VALUES (7, N'Customer', N'Testing', N'customer@foohub.com', N'customer123', N'Male', CAST(N'1998-12-28' AS Date), N'Customer', NULL, NULL)
+GO
+INSERT [dbo].[UserInfo] ([ID], [FirstName], [LastName], [Email], [Password], [Gender], [DateOfBirth], [UserType], [Salary], [JoiningDate]) VALUES (8, N'Marrow', N'Cat', N'marrow@cat.com', N'marrowcat2026', N'Male', CAST(N'1990-09-12' AS Date), N'Customer', NULL, NULL)
+GO
+INSERT [dbo].[UserInfo] ([ID], [FirstName], [LastName], [Email], [Password], [Gender], [DateOfBirth], [UserType], [Salary], [JoiningDate]) VALUES (9, N'Mahsan', N'Khan', N'mahsan@gmail.com', N'mahsan2024', N'Male', CAST(N'2025-07-04' AS Date), N'Customer', NULL, NULL)
+GO
+INSERT [dbo].[UserInfo] ([ID], [FirstName], [LastName], [Email], [Password], [Gender], [DateOfBirth], [UserType], [Salary], [JoiningDate]) VALUES (11, N'Jahid', N'Hasan', N'jahid@aiub', N'jahid123', N'Male', CAST(N'1992-12-28' AS Date), N'Customer', NULL, NULL)
+GO
+INSERT [dbo].[UserInfo] ([ID], [FirstName], [LastName], [Email], [Password], [Gender], [DateOfBirth], [UserType], [Salary], [JoiningDate]) VALUES (12, N'Test', N'1', N'test@fhms', N'123', N'Male', CAST(N'1998-12-25' AS Date), N'Customer', NULL, NULL)
+GO
+INSERT [dbo].[UserInfo] ([ID], [FirstName], [LastName], [Email], [Password], [Gender], [DateOfBirth], [UserType], [Salary], [JoiningDate]) VALUES (13, N'Rabeya', N'Bashree', N'raavi@bracu', N'raavi123', N'Female', CAST(N'1998-05-24' AS Date), N'Employee', 45000, CAST(N'2026-01-21' AS Date))
+GO
+INSERT [dbo].[UserInfo] ([ID], [FirstName], [LastName], [Email], [Password], [Gender], [DateOfBirth], [UserType], [Salary], [JoiningDate]) VALUES (14, N'User', N'Employee', N'emp', N'123', N'Male', CAST(N'2016-01-19' AS Date), N'Employee', 15000, CAST(N'2026-01-22' AS Date))
+GO
+INSERT [dbo].[UserInfo] ([ID], [FirstName], [LastName], [Email], [Password], [Gender], [DateOfBirth], [UserType], [Salary], [JoiningDate]) VALUES (15, N'Farzana', N'Khanom Amily', N'amily@gmail.com', N'hello2441139', N'Female', CAST(N'2022-08-20' AS Date), N'Employee', 35000, CAST(N'2026-01-24' AS Date))
+GO
+INSERT [dbo].[UserInfo] ([ID], [FirstName], [LastName], [Email], [Password], [Gender], [DateOfBirth], [UserType], [Salary], [JoiningDate]) VALUES (16, N'Lamiya', N'Chef', N'chef', N'123', N'Female', CAST(N'1990-09-12' AS Date), N'Chef', 200000, CAST(N'2026-01-24' AS Date))
+GO
+SET IDENTITY_INSERT [dbo].[UserInfo] OFF
+GO
+ALTER TABLE [dbo].[Inventory]  WITH CHECK ADD  CONSTRAINT [FK_Inventory_Category] FOREIGN KEY([MenuID])
+REFERENCES [dbo].[Menu] ([MenuID])
+GO
+ALTER TABLE [dbo].[Inventory] CHECK CONSTRAINT [FK_Inventory_Category]
+GO
+ALTER TABLE [dbo].[Menu1]  WITH CHECK ADD  CONSTRAINT [FK_Menu1_Category] FOREIGN KEY([CategoryID])
+REFERENCES [dbo].[Category] ([CategoryID])
+GO
+ALTER TABLE [dbo].[Menu1] CHECK CONSTRAINT [FK_Menu1_Category]
+GO
+ALTER TABLE [dbo].[Menu1]  WITH CHECK ADD  CONSTRAINT [FK_Menu1_Customer_Order] FOREIGN KEY([CustomerID])
+REFERENCES [dbo].[Customer_Order] ([ID])
+GO
+ALTER TABLE [dbo].[Menu1] CHECK CONSTRAINT [FK_Menu1_Customer_Order]
+GO
